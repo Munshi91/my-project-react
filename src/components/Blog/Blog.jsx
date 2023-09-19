@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { FaBookmark } from 'react-icons/fa';
 
 const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
   const {
@@ -31,9 +30,7 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
           <button
             onClick={() => handleAddToBookmark(blog)}
             className="ml-2 text-orange-600 text-2xl"
-          >
-            <FaBookmark></FaBookmark>
-          </button>
+          ></button>
         </div>
       </div>
       <h2 className="text-3xl">{title}</h2>
