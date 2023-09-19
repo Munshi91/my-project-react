@@ -13,7 +13,7 @@ function App() {
   };
 
   const handleMarkAsRead = time => {
-    console.log('marking as read', time);
+    setReadingTime(readingTime + time);
   };
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
           handleAddToBookmark={handleAddToBookmark}
           handleMarkAsRead={handleMarkAsRead}
         ></Blogs>
-        <Bookmarks bookmarks={bookmarks}></Bookmarks>
+        <Bookmarks bookmarks={bookmarks} readingTime={readingTime}></Bookmarks>
       </div>
     </>
   );
