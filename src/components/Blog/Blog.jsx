@@ -41,7 +41,12 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
           </span>
         ))}
       </p>
-      <button className="mt-4 text-purple-500">Mark As Read</button>
+      <button
+        onClick={() => handleMarkAsRead(reading_time)}
+        className="mt-4 font-bold underline text-purple-700"
+      >
+        Mark As Read
+      </button>
     </div>
   );
 };
@@ -49,6 +54,7 @@ const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
 Blog.propTypes = {
   blog: PropTypes.object.isRequired,
   handleAddToBookmark: PropTypes.func,
+  handleMarkAsRead: PropTypes.func,
 };
 
 export default Blog;
